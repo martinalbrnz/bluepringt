@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { defaultFeatureFlags } from 'src/app/config/featureFlags';
 
 export interface FeatureFlags {
   [key: string]: boolean
@@ -14,7 +13,7 @@ export interface FeatureFlags {
   providedIn: 'root'
 })
 export class FeatureFlagService {
-  #featureFlags = new BehaviorSubject<FeatureFlags>(defaultFeatureFlags)
+  #featureFlags = new BehaviorSubject<FeatureFlags>({})
 
   getFeatureFlagValue(flagName: string) {
     return this.#featureFlags.getValue()[flagName]
