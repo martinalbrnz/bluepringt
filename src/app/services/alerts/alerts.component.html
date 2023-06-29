@@ -1,0 +1,10 @@
+<div
+	*ngIf="alerts$ | async"
+	class="absolute flex flex-col gap-2 top-4 right-4"
+>
+	<app-alert-item
+		*ngFor="let alert of alerts$ | async"
+		[alert]="alert"
+		(dismiss)="dismiss($event)"
+	></app-alert-item>
+</div>
