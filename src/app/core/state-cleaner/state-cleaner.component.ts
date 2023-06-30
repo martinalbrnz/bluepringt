@@ -9,8 +9,6 @@ import { Subscription } from 'rxjs';
 })
 export class StateCleaner implements OnDestroy {
   subscriptions = new Subscription()
-  palabra = 'mono'
-  no_entiendo = 'No entiendo nada...'
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe()
