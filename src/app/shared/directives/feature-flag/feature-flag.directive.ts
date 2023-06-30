@@ -1,5 +1,5 @@
-import { Directive, ElementRef, Input, OnInit } from '@angular/core';
-import { FeatureFlagService } from 'src/app/services/feature-flag/feature-flag.service';
+import { Directive, ElementRef, Input, OnInit } from '@angular/core'
+import { FeatureFlagService } from 'src/app/services/feature-flag/feature-flag.service'
 
 @Directive({
   selector: '[featureFlag]',
@@ -15,8 +15,8 @@ export class FeatureFlagDirective implements OnInit {
 
   ngOnInit(): void {
     if (!this.featureFlagService.getFeatureFlagValue(this.flagName)) {
-      const element = this.elementRef.nativeElement;
-      element.parentNode.removeChild(element);
+      const element = this.elementRef.nativeElement
+      element.parentNode.removeChild(element)
     }
   }
 }

@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from '@angular/core'
+import { BehaviorSubject } from 'rxjs'
 
 export interface FeatureFlags {
   [key: string]: boolean

@@ -1,6 +1,6 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { CommonModule } from '@angular/common'
+import { Component, OnDestroy } from '@angular/core'
+import { Subscription } from 'rxjs'
 
 @Component({
   standalone: true,
