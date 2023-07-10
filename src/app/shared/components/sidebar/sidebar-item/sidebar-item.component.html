@@ -1,0 +1,31 @@
+<div
+	*ngIf="itemData as item"
+	class="flex flex-col gap-2"
+>
+	<div class="relative flex items-center justify-between hover:bg-primary-500">
+		<span
+			class="flex-1 bg-primary-600 p-2"
+			[routerLink]="item.path ?? null"
+			(click)="item.action && item?.action()"
+		>{{ item.label }}</span>
+		<div
+			*ngIf="item.children"
+			class="absolute top-1/2 right-2 -translate-y-1/2
+				w-6 h-6 rounded-full
+				bg-green-600 cursor-pointer select-none
+				transition-transform duration-200"
+			[ngClass]="{'rotate-90': openChildren()}"
+			(click)="toggleOpen()"
+		>
+			->
+		</div>
+	</div>
+	<div
+		*ngIf="item.children && openChildren()"
+		class="flex flex-col gap-2 ps-4"
+	>
+		<ng-container *ngFor="let children of item.children">
+			<sidebar-item [itemData]="children"></sidebar-item>
+		</ng-container>
+	</div>
+</div>

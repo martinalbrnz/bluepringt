@@ -10,6 +10,7 @@
 	- Loading overlay or something like this
 	- Add token to requests
 	- Token refrshing (before )
+- Schematics to generate components with services
 
 # Misc
 Using feather icons, but you can load whatever you want

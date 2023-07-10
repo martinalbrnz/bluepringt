@@ -1,9 +1,16 @@
+/* eslint-disable semi */
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+import colors from "tailwindcss/colors";
+export default {
   darkMode: "class",
   content: ["./src/**/*.{html,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: colors.gray,
+        secondary: colors.slate,
+      },
+    },
   },
   plugins: [],
 };
