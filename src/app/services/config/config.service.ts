@@ -39,4 +39,6 @@ export class ConfigService {
     multi: true,
     deps: [ConfigService]
   }
+
+  * Don't forget to import HttpClientModule on app.module
 */
