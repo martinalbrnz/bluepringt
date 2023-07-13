@@ -40,7 +40,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -48,14 +48,19 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prouction.ts"
+                  "with": "src/environments/environment.production.ts"
                 }
               ],
-              "aot": true
+              "outputHashing": "all",
+              "aot": true,
+              "deleteOutputPath": false,
+              "optimization": true,
+              "buildOptimizer": true,
+              "vendorChunk": false,
+              "commonChunk": true
             },
             "development": {
               "buildOptimizer": false,

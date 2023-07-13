@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StateCleaner } from './state-cleaner.component';
+import { ComponentsComponent } from './components.component';
 
-describe('StateComponentComponent', () => {
-  let component: StateCleaner;
-  let fixture: ComponentFixture<StateCleaner>;
+describe('ComponentsComponent', () => {
+  let component: ComponentsComponent;
+  let fixture: ComponentFixture<ComponentsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [StateCleaner]
+      imports: [ComponentsComponent]
     });
-    fixture = TestBed.createComponent(StateCleaner);
+    fixture = TestBed.createComponent(ComponentsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

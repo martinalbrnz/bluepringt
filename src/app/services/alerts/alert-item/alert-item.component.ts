@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { akarCircleAlert, akarCircleCheck, akarCircleX, akarCross } from '@ng-icons/akar-icons';
-import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import { fadeInOut } from 'src/app/animations/fade-in-out';
-import { Alert, AlertType } from '../alerts.service';
+import { CommonModule } from '@angular/common'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { akarCircleAlert, akarCircleCheck, akarCircleX, akarCross } from '@ng-icons/akar-icons'
+import { NgIconComponent, provideIcons } from '@ng-icons/core'
+import { fadeInOut } from 'src/app/animations/fade-in-out'
+import { Alert, AlertType } from '../alerts.service'
 
 @Component({
   selector: 'app-alert-item',

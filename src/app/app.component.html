@@ -1,2 +1,12 @@
-<app-alerts></app-alerts>
-<router-outlet></router-outlet>
+<main [ngClass]="{'dark': dark()}">
+	<app-alerts></app-alerts>
+
+	<router-outlet></router-outlet>
+	<button
+		class="absolute bottom-4 right-4 flex items-center justify-between w-32 p-2 text-white rounded-sm bg-green-600"
+		(click)="toggleDark()"
+	>
+		<span>Dark theme:</span>
+		<span>{{ dark() ? 'on' :
+			'off'}}</span></button>
+</main>

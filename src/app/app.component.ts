@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'bluepringt';
+  title = 'bluepringt'
+
+  dark = signal(false)
+
+  toggleDark() {
+    this.dark.update(mode => !mode)
+  }
 }

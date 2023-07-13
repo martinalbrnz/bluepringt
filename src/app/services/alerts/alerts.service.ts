@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from '@angular/core'
+import { BehaviorSubject } from 'rxjs'
 
 export interface Alert {
   id: number
@@ -28,7 +28,7 @@ export class AlertsService {
   ])
 
   addAlert(message: string, type: AlertType, duration: number = defaultDurationInMs) {
-    let alerts: Alert[] = this.#alerts.getValue()
+    const alerts: Alert[] = this.#alerts.getValue()
     const id = alerts.reduce((prev, curr) => {
       return curr.id >= prev ? curr.id + 1 : prev
     }, 1)
