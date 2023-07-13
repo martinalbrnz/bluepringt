@@ -14,7 +14,7 @@ export const navRoutesMock: SidebarItem[] = [
 			},
 			{
 				path: 'perfil/editar',
-				label: 'Actualizar'
+				label: 'Actualizar',
 			}
 		]
 	},
