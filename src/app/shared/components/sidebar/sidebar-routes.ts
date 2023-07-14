@@ -1,6 +1,6 @@
 import { SidebarItem } from "@models/sidebarItems.interface"
 
-export const navRoutesMock: SidebarItem[] = [
+export const sidebarRoutes: SidebarItem[] = [
 	{
 		path: '',
 		label: "Inicio"
