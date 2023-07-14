@@ -1,9 +1,9 @@
 <div
-	*ngIf="alerts$ | async"
+	*ngIf="alerts() as alerts"
 	class="absolute flex flex-col gap-2 top-4 right-4"
 >
 	<app-alert-item
-		*ngFor="let alert of alerts$ | async"
+		*ngFor="let alert of alerts"
 		[alert]="alert"
 		(dismiss)="dismiss($event)"
 	></app-alert-item>

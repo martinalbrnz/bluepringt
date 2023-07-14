@@ -18,7 +18,7 @@ export class AlertsComponent {
     private alertsService: AlertsService,
   ) { }
 
-  alerts$ = this.alertsService.alerts
+  alerts = this.alertsService.alerts
 
   dismiss(id: number) {
     this.alertsService.dismiss(id)
