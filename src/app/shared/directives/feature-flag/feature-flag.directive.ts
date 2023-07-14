@@ -1,5 +1,5 @@
-import { Directive, ElementRef, Input, OnInit } from '@angular/core'
-import { FeatureFlagService } from 'src/app/services/feature-flag/feature-flag.service'
+import { Directive, ElementRef, Input, OnInit, inject } from '@angular/core'
+import { FeatureFlagService } from './feature-flag.service'
 
 @Directive({
   selector: '[featureFlag]',
@@ -8,10 +8,8 @@ import { FeatureFlagService } from 'src/app/services/feature-flag/feature-flag.s
 export class FeatureFlagDirective implements OnInit {
   @Input('featureFlag') flagName!: string
 
-  constructor(
-    private elementRef: ElementRef,
-    private featureFlagService: FeatureFlagService,
-  ) { }
+  elementRef = inject(ElementRef)
+  featureFlagService = inject(FeatureFlagService)
 
   ngOnInit(): void {
     if (!this.featureFlagService.getFeatureFlagValue(this.flagName)) {

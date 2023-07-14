@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 import { TestBed } from '@angular/core/testing'
-import { FeatureFlagService } from 'src/app/services/feature-flag/feature-flag.service'
 import { FeatureFlagDirective } from './feature-flag.directive'
+import { FeatureFlagService } from './feature-flag.service'
 
 @Component({
   template: `

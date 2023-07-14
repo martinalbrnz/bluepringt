@@ -19,8 +19,18 @@ export const navRoutesMock: SidebarItem[] = [
 		]
 	},
 	{
-		path: 'users',
-		label: 'Usuarios',
+		path: 'directivas',
+		label: 'Directivas',
+		children: [
+			{
+				path: 'show-dev',
+				label: 'Modo dev (*showDev)'
+			},
+			{
+				path: 'feature-flag',
+				label: 'Modo dev (feature-flag)'
+			},
+		]
 	},
 	{
 		label: 'Proyectos',
