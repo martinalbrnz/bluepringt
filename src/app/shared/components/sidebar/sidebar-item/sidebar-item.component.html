@@ -2,7 +2,7 @@
 	*ngIf="itemData as item"
 	class="flex flex-col gap-2"
 >
-	<div class="relative flex items-center justify-between hover:bg-primary-500">
+	<div class="relative flex items-center justify-between hover:bg-primary-500 select-none cursor-pointer">
 		<span
 			class="flex-1 bg-primary-600 p-2"
 			[routerLink]="item.path ?? null"

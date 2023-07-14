@@ -1,7 +1,9 @@
 <div
 	@fadeInOut
-	class="flex flex-1 items-center justify-between shadow-sm rounded px-4 py-2 w-96 border-s-4
-	hover:scale-105 transition-all duration-200"
+	class="flex flex-1 items-center justify-between shadow-sm rounded
+	bg-white dark:bg-gray-900 text-black dark:text-white
+	px-4 py-2 w-96 border-s-4 select-none cursor-pointer
+	hover:scale-105 transition-all duration-200 z-50"
 	[ngClass]="{
 		'border-red-500': alert.type === AlertType.Danger,
 		'border-orange-400': alert.type === AlertType.Warning,
@@ -10,8 +12,11 @@
 	}"
 >
 	<span>{{ alert.message }}</span>
-	<ng-icon
-		name="akarCross"
+	<div
 		(click)="dismissItem(alert.id)"
-	></ng-icon>
+		class="flex items-center justify-center rounded-full h-7 w-7
+		hover:dark:bg-gray-950 hover:bg-gray-100 active:scale-95"
+	>
+		<ng-icon name="akarCross"></ng-icon>
+	</div>
 </div>
