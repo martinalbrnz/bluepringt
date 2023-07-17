@@ -21,3 +21,11 @@ Using feather icons, but you can load whatever you want
 - Directives:
 	- *showDev: show component only on dev mode
 	- featureFlags: show only components flagged as true
+
+
+# Z-indexes
+
+- Body
+- Sidenav
+- Modals/dialogs
+- Alerts

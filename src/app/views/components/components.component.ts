@@ -12,6 +12,6 @@ import { SidebarComponent } from '@components/sidebar/sidebar.component'
   templateUrl: './components.component.html',
   styleUrls: ['./components.component.scss']
 })
-export class ComponentsComponent {
+export default class ComponentsComponent {
 
 }
