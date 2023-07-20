@@ -6,16 +6,12 @@ export const sidebarRoutes: SidebarItem[] = [
 		label: "Inicio"
 	},
 	{
-		label: 'Perfil',
+		label: 'Componentes',
 		children: [
 			{
-				path: 'profile/:id',
-				label: 'Ver mi perfil'
+				path: 'components',
+				label: 'Todos los componentes'
 			},
-			{
-				path: 'perfil/editar',
-				label: 'Actualizar',
-			}
 		]
 	},
 	{
@@ -30,57 +26,6 @@ export const sidebarRoutes: SidebarItem[] = [
 				path: 'feature-flag',
 				label: 'Modo dev (feature-flag)'
 			},
-		]
-	},
-	{
-		label: 'Proyectos',
-		children: [
-			{
-				label: 'Nuevos',
-				children: [
-					{ label: 'Proyecto 1' },
-					{ label: 'Proyecto 2' },
-					{ label: 'Proyecto 3' },
-					{ label: 'Proyecto 4' },
-				]
-			},
-			{
-				label: 'Empezados',
-				children: [
-					{ label: 'Proyecto 6' },
-					{ label: 'Proyecto 7' },
-					{ label: 'Proyecto 8' },
-					{ label: 'Proyecto 9' },
-					{ label: 'Proyecto 10' },
-					{ label: 'Proyecto 11' },
-				]
-			},
-			{
-				label: 'Terminados',
-				children: [
-					{
-						label: 'Proyecto 12',
-						children: [
-							{ label: 'Ingresos' },
-							{ label: 'Costos' }
-						]
-					},
-					{
-						label: 'Proyecto 13',
-						children: [
-							{ label: 'Ingresos' },
-							{ label: 'Costos' }
-						]
-					},
-					{
-						label: 'Proyecto 14',
-						children: [
-							{ label: 'Ingresos' },
-							{ label: 'Costos' }
-						]
-					}
-				]
-			}
 		]
 	},
 	{

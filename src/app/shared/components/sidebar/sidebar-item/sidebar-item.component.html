@@ -22,8 +22,9 @@
 		</ng-icon>
 	</div>
 	<div
+		@grow
 		*ngIf="item.children && openChildren()"
-		class="flex flex-col gap-2 ps-4"
+		class="flex flex-col gap-2 ps-4 overflow-hidden"
 	>
 		<ng-container *ngFor="let children of item.children">
 			<sidebar-item [itemData]="children"></sidebar-item>

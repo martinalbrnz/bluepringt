@@ -17,7 +17,7 @@ export const shrinkUp = animation([
 		height: '*'
 	}),
 	animate(
-		'{{ time }} cubic-bezier(1,.03,.61,.85)',
+		'{{ time }} ease-out',
 		style({
 			height: '1px'
 		})
