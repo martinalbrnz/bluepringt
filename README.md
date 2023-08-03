@@ -1,4 +1,6 @@
-# TODO
+# BluepriNGt panel starter
+
+### TODO
 
 - Layout items
 	- Sidebar reactive to routes file
@@ -13,19 +15,25 @@
 
 - Schematics to generate components with services
 
-# Misc
+### Misc
 Using feather icons, but you can load whatever you want
 
-# Features
+### Features
 
 - Directives:
 	- *showDev: show component only on dev mode
 	- featureFlags: show only components flagged as true
 
 
-# Z-indexes
+### Z-indexes
 
 - Body
 - Sidenav
 - Modals/dialogs
 - Alerts
+
+### Components
+
+#### Layout
+- Header
+- Sidebar

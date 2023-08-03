@@ -19,12 +19,7 @@ const defaultDurationInMs = 5000
   providedIn: 'root'
 })
 export class AlertsService {
-  #alerts = signal<Alert[]>([
-    { id: 1, message: 'AAAAAAAAAAA', type: AlertType.Danger },
-    { id: 2, message: 'AAAAAAAAAAA', type: AlertType.Info },
-    { id: 3, message: 'AAAAAAAAAAA', type: AlertType.Warning },
-    { id: 4, message: 'AAAAAAAAAAA', type: AlertType.Success },
-  ])
+  #alerts = signal<Alert[]>([])
 
   addAlert(message: string, type: AlertType, duration: number = defaultDurationInMs) {
     const id = this.#alerts()

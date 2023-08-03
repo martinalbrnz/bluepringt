@@ -1,14 +1,28 @@
-<bp-sidebar>
-	<!-- <div
-		class="bg-red-400 p-4"
-		header
-	>
-		<span>Buenos días!</span>
-	</div> -->
-	<!-- <div
-		class="bg-green-400 p-4"
-		footer
-	>
-		<span>Buenos días!</span>
-	</div> -->
-</bp-sidebar>
+<form [formGroup]="form">
+	<bp-form-field>
+		<label for="normal">Normal</label>
+		<input
+			type="text"
+			formControlName="normal"
+		>
+	</bp-form-field>
+
+	<bp-form-field>
+		<label for="normal">Errors</label>
+		<input
+			type="text"
+			formControlName="errors"
+		>
+	</bp-form-field>
+
+	<bp-form-field>
+		<label for="normal">Numbers</label>
+		<input
+			type="text"
+			formControlName="numbers"
+		>
+	</bp-form-field>
+
+</form>
+
+<pre>{{ form.value | json }}</pre>

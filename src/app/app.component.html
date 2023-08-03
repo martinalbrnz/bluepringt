@@ -1,7 +1,8 @@
-<main [ngClass]="{'dark': dark()}">
-	<app-alerts></app-alerts>
-
-	<router-outlet></router-outlet>
+<div
+	class="flex h-[100svh] md:h-screen w-screen"
+	[ngClass]="{'dark': dark()}"
+>
+	<app-alerts />
 	<button
 		class="absolute bottom-4 right-4 flex items-center justify-between w-32 p-2 text-white rounded-sm bg-green-600"
 		(click)="toggleDark()"
@@ -9,4 +10,13 @@
 		<span>Dark theme:</span>
 		<span>{{ dark() ? 'on' :
 			'off'}}</span></button>
-</main>
+	<bp-sidebar />
+	<div class="flex flex-col flex-1">
+		<!-- <Header /> -->
+		<main class="flex justify-center flex-grow-[1] overflow-y-auto bg-slate-100 dark:bg-slate-900 custom-scrollbar">
+			<div class="w-full max-w-6xl">
+				<router-outlet />
+			</div>
+		</main>
+	</div>
+</div>
