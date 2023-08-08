@@ -6,6 +6,10 @@ const routes: Routes = [
     path: 'components',
     loadComponent: () => import('@views/components/components.component')
   },
+  {
+    path: 'resource',
+    loadComponent: () => import('@views/resource/resource.component')
+  },
 ]
 
 @NgModule({
