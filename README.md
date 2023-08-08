@@ -13,7 +13,7 @@
 	- Add token to requests
 	- Token refrshing
 
-- Schematics to generate components with services
+- Script to generate components with services
 
 ### Misc
 Using feather icons, but you can load whatever you want

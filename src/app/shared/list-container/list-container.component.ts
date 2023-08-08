@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'
+import { Component, Input } from '@angular/core'
 
 @Component({
   selector: 'bp-list-container',
@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./list-container.component.scss']
 })
 export class ListContainerComponent {
-
+  @Input() data?: any
 }
