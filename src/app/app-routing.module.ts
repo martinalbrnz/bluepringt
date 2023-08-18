@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'resource',
-    loadComponent: () => import('@views/resource/resource.component')
+    loadComponent: () => import('@views/resource/resource.module')
   },
 ]
 

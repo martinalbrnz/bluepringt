@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'bp-form',
+  selector: 'bp-list',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.scss']
 })
-export class FormComponent {
+export class ListComponent {
 
 }
