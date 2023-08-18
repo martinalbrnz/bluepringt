@@ -10,6 +10,7 @@
       "@guards/*": ["./src/app/guards/*"],
       "@models/*": ["./src/app/models/*"],
       "@pipes/*": ["./src/app/shared/pipes/*"],
+      "@resolvers/*": ["./src/app/resolvers/*"],
       "@services/*": ["./src/app/services/*"],
       "@views/*": ["./src/app/views/*"]
     },
