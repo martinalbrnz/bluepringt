@@ -17,8 +17,9 @@ export default {
           "20%": { transform: "scale(1.1)" },
         },
         wiggle: {
-          "0%, 100%": { transform: "rotate(-3deg)" },
-          "50%": { transform: "rotate(3deg)" },
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "25%": { transform: "rotate(-3deg)" },
+          "75%": { transform: "rotate(3deg)" },
         },
         coin: {
           "0%, 100%": { transform: "rotateY(-180deg)" },
