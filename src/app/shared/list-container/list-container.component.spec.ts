@@ -1,21 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { ListContainerComponent } from './list-container.component';
+import { ListContainerComponent } from './list-container.component'
 
 describe('ListContainerComponent', () => {
-  let component: ListContainerComponent;
-  let fixture: ComponentFixture<ListContainerComponent>;
+  let component: ListContainerComponent
+  let fixture: ComponentFixture<ListContainerComponent>
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [ListContainerComponent]
-    });
-    fixture = TestBed.createComponent(ListContainerComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    })
+    fixture = TestBed.createComponent(ListContainerComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component)
+.toBeTruthy()
+  })
+})
