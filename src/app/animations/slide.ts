@@ -19,7 +19,7 @@ export const shrinkUp = animation([
 	animate(
 		'{{ time }} ease-out',
 		style({
-			height: '1px'
+			height: '0px'
 		})
 	)
 ])
