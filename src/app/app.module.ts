@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http'
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { APP_INITIALIZER, NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 
@@ -10,27 +10,21 @@ import { AlertsComponent } from '@services/alerts/alerts.component'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 
-@NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    AlertsComponent,
-    SidebarComponent,
-    HttpClientModule,
-  ],
-  providers: [
-    ConfigService,
-    {
-      provide: APP_INITIALIZER,
-      useFactory: appInitializer,
-      multi: true,
-      deps: [ConfigService]
-    }
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        AlertsComponent,
+        SidebarComponent], providers: [
+        ConfigService,
+        {
+            provide: APP_INITIALIZER,
+            useFactory: appInitializer,
+            multi: true,
+            deps: [ConfigService]
+        },
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
