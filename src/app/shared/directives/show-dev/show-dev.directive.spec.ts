@@ -4,10 +4,11 @@ import { ShowDevDirective } from './show-dev.directive'
 import { ShowDevService } from './show-dev.service'
 
 @Component({
-	template: `
+    template: `
   <div *showDev>
   </div>
-  `
+  `,
+    standalone: false
 })
 class TestComponent { }
 

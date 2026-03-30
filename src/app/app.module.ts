@@ -1,5 +1,5 @@
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
-import { APP_INITIALIZER, NgModule } from '@angular/core'
+import { NgModule, inject, provideAppInitializer } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -19,12 +19,10 @@ import { AppComponent } from './app.component'
         AlertsComponent,
         SidebarComponent], providers: [
         ConfigService,
-        {
-            provide: APP_INITIALIZER,
-            useFactory: appInitializer,
-            multi: true,
-            deps: [ConfigService]
-        },
+        provideAppInitializer(() => {
+        const initializerFn = (appInitializer)(inject(ConfigService));
+        return initializerFn();
+      }),
         provideHttpClient(withInterceptorsFromDi())
     ] })
 export class AppModule { }

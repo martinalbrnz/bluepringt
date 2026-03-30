@@ -5,14 +5,13 @@ import { SidebarItemComponent } from './sidebar-item/sidebar-item.component'
 import { sidebarRoutes } from './sidebar-routes'
 
 @Component({
-  selector: 'bp-sidebar',
-  standalone: true,
-  imports: [
-    CommonModule,
-    SidebarItemComponent,
-  ],
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+    selector: 'bp-sidebar',
+    imports: [
+        CommonModule,
+        SidebarItemComponent,
+    ],
+    templateUrl: './sidebar.component.html',
+    styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
   @Input() sidebarItems: SidebarItem[] = sidebarRoutes

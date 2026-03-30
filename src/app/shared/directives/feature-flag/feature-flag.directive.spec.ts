@@ -4,10 +4,11 @@ import { FeatureFlagDirective } from './feature-flag.directive'
 import { FeatureFlagService } from './feature-flag.service'
 
 @Component({
-  template: `
+    template: `
   <div featureFlag="feature">
   </div>
-  `
+  `,
+    standalone: false
 })
 class TestComponent { }
 

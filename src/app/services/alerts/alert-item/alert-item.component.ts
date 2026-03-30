@@ -6,16 +6,15 @@ import { fadeInOut } from 'src/app/animations/fade-in-out'
 import { Alert, AlertType } from '../alerts.service'
 
 @Component({
-  selector: 'app-alert-item',
-  standalone: true,
-  imports: [
-    CommonModule,
-    NgIconComponent,
-  ],
-  animations: [fadeInOut],
-  templateUrl: './alert-item.component.html',
-  styleUrls: ['./alert-item.component.scss'],
-  viewProviders: [provideIcons({ akarCircleCheck, akarCircleAlert, akarCircleX, akarCross })]
+    selector: 'app-alert-item',
+    imports: [
+        CommonModule,
+        NgIconComponent,
+    ],
+    animations: [fadeInOut],
+    templateUrl: './alert-item.component.html',
+    styleUrls: ['./alert-item.component.scss'],
+    viewProviders: [provideIcons({ akarCircleCheck, akarCircleAlert, akarCircleX, akarCross })]
 })
 export class AlertItemComponent {
   @Input() alert!: Alert
